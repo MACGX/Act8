@@ -20,14 +20,21 @@ void Laboratorio::agregarComputadora(const Computadora &p)
 
 void Laboratorio::mostrar()
 {
+    cout << left;
+    cout << setw(10) << "Os" ;
+    cout << setw(5) << "Ram";
+    cout << setw(20) << "Cpu";
+    cout << setw(15) << "Gpu";
+    cout << endl; 
     for (size_t i = 0; i < cont; i++)
     {
-        Computadora &p = arreglo[i];
-        cout << "Sistema Operativo: " << p.getOs() << endl;
-        cout << "RAM: " << p.getRam() <<" GB " << endl;
-        cout << "CPU: " << p.getCPU() << endl;
-        cout << "GPU: " << p.getGPU() << endl;
-        cout << "--------------------------------"<<endl;
+        Computadora &c = arreglo[i];
+        cout << c;
+        //cout << "Sistema Operativo: " << p.getOs() << endl;
+        //cout << "RAM: " << p.getRam() <<" GB " << endl;
+        //cout << "CPU: " << p.getCPU() << endl;
+        //cout << "GPU: " << p.getGPU() << endl;
+        //cout << "--------------------------------"<<endl;
     }
     
 }

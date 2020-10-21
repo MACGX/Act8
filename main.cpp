@@ -24,7 +24,14 @@ lab.agregarComputadora(intel);
 lab.agregarComputadora(amd);
 lab.agregarComputadora(c1);
 
+Computadora c2;
+cin >> c2;
+
+lab << c2;
+
 lab.mostrar();
+
+cout << c1; 
 
     return 0;
 }

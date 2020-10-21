@@ -3,6 +3,8 @@
 #define COMPUTADORA_H
 
 #include <iostream>
+#include <iomanip>
+#include <string>
 using namespace std;
 class Computadora 
 {
@@ -24,5 +26,34 @@ void setCPU(const string &v);
 string getCPU();
 void setGPU(const string &v);
 string getGPU();
+
+friend ostream& operator<<(ostream &out, const Computadora &c)
+{
+    out << left ;
+    out << setw(10) << c.Os ;
+    out << setw(5) << c.Ram;
+    out << setw(20) << c.Cpu;
+    out << setw(15) << c.Gpu; 
+    out << endl; 
+    return out;
+}
+
+friend istream& operator>>(istream &in, Computadora &c)
+{
+    cout << "Os: ";
+    getline(cin, c.Os);
+
+    cout << "Ram: ";
+    cin >> c.Ram;
+
+    cin.ignore();
+    cout << "Cpu: ";
+    getline(cin,c.Cpu);
+
+    cout << "Gpu: ";
+    getline(cin, c.Gpu);
+     
+    return in;
+}
 
 };
