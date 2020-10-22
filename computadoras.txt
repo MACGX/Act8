@@ -1,0 +1,16 @@
+Windows
+16
+I7 10ma generacion
+GTX 1050 Ti
+Linux
+32
+Ryzen7 3700X
+Radeon VII
+Windows
+64
+Ryzen 7 5800X
+RTX 3090
+Linux
+128
+RyIn
+VII RTX
